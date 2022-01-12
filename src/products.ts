@@ -29,7 +29,7 @@ export function calcAverageProductPrice(products: Product[]): number {
       total += products[i].price;
     }
   }
-  return total / products.length;
+  return total === 0 ? total : total / products.length;
 }
 
 let averagePrice: number = calcAverageProductPrice(products);
